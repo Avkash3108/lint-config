@@ -1,21 +1,17 @@
 {
   "name": "@avkash3108/lint-config",
-  "version": "1.1.0",
+  "version": "1.2.4",
   "description": "Collection of jslint and stylelint rules.",
   "main": "index.js",
   "bin": {
     "check-lint-errors": "./bin/index.js"
   },
-  "files": [
-    "/src",
-    "/configurations"
-  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Avkash3108/lint-config.git"
+    "url": "git+https://github.com/avkash3108/lint-config.git"
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"
@@ -26,7 +22,6 @@
     "jslint",
     "stylelint"
   ],
-  "author": "avkash3108",
   "license": "ISC",
   "dependencies": {
     "eslint": "^7.0.0",
