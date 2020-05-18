@@ -1,0 +1,43 @@
+{
+  "name": "@avkash3108/list-config",
+  "version": "1.0.0",
+  "description": "Collection of jslint and stylelint rules.",
+  "main": "index.js",
+  "bin": {
+    "lint": "./bin/index.js"
+  },
+  "files": [
+    "/src",
+    "/configurations"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Avkash3108/lint-config.git"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
+  "keywords": [
+    "lint",
+    "eslint",
+    "jslint",
+    "stylelint"
+  ],
+  "author": "avkash3108",
+  "license": "ISC",
+  "dependencies": {
+    "eslint": "^7.0.0",
+    "eslint-formatter-pretty": "^3.0.1",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-jest": "^23.13.1",
+    "eslint-plugin-mocha": "^7.0.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-react": "^7.20.0",
+    "typescript": "^3.9.2",
+    "shelljs": "^0.8.4",
+    "yargs": "^15.3.0-beta.0"
+  }
+}

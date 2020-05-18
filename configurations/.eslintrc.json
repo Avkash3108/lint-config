@@ -1,0 +1,29 @@
+{
+    "parserOptions": {
+        "ecmaVersion": 8,
+        "sourceType": "module",
+        "ecmaFeatures": {
+            "experimentalObjectRestSpread": true,
+            "jsx": true
+        }
+    },
+    "env": {
+        "browser": true,
+        "es6": true,
+        "mocha": true,
+        "node": true,
+        "jest/globals": true
+    },
+    "parser": "babel-eslint",
+    "plugins": [
+        "import",
+        "mocha",
+        "promise",
+        "react",
+        "jest"
+    ],
+    "extends": "eslint:recommended",
+    "rules": {
+        "semi": "error"
+    }
+}
