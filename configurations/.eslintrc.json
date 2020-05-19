@@ -22,7 +22,10 @@
         "react",
         "jest"
     ],
-    "extends": "eslint:recommended",
+    "extends": [
+        "eslint:recommended",
+        "plugin:react/recommended"
+    ],
     "rules": {
         "semi": "error"
     }

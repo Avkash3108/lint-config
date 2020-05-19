@@ -1,17 +1,42 @@
 const pathUtils = require('../utils/pathUtils');
 const shelljs = require('shelljs');
+const fs = require('fs');
+
+function getExistingFilesAndExtensions(params) {
+    const existingFiles = [];
+    const existingExtension = [];
+    const sourceFiles = fs.readdirSync('.');
+    const extensions = params.extensions.split(' ');
+    const files = params.files.split(' ');
+
+    extensions.forEach((extension) => {
+        if (sourceFiles.some((name) => name.endsWith(extension))) {
+            existingExtension.push(`${extension}`);
+        }
+    })
+    const sourceFilesCache = new Set(sourceFiles);
+
+    files.forEach((name) => {
+        if (sourceFilesCache.has(name)) {
+            existingFiles.push(name);
+        }
+    });
+
+    return {
+        extensions: `--ext ${existingExtension.join(' --ext ')}`,
+        files: existingFiles.join(' ')
+    }
+}
 
 function run(params) {
-    console.log(`Running eslint on ${params.files}`);
     const linter = pathUtils.getPackagePath('eslint', 'bin/eslint');
     const formatter = pathUtils.getPackagePath('eslint-formatter-pretty', 'index.js');
     const fix = params.fix ? '--fix' : '';
-    const extensions = `--ext ${params.extensions}`;
-    const files = params.files;
-    const command = `node ${linter} --report-unused-disable-directives ${fix} --format "${formatter}" ${extensions} ${files}`;
+    const existingPatterns  = getExistingFilesAndExtensions(params);
+    console.log(`Running eslint on ${existingPatterns.extensions}`);
+    const command = `node ${linter} --report-unused-disable-directives ${fix} --format "${formatter}" ${existingPatterns.extensions} ${existingPatterns.files}`;
     const result = shelljs.exec(command);
     const success = 0;
-
     if (result.code !== undefined && result.code !== success) {
         shelljs.exit(result.code);
     }
@@ -30,7 +55,7 @@ exports.builder = {
         type: 'boolean'
     },
     extensions: {
-        default: 'js, jsx, ts, tsx',
+        default: '.js .ts .jsx .tsx',
         type: 'string'
     }
 };
