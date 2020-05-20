@@ -24,9 +24,14 @@
     ],
     "extends": [
         "eslint:recommended",
-        "plugin:react/recommended"
+        "plugin:react/recommended",
+        "./eslint-rules/import.js",
+        "./eslint-rules/mocha.js",
+        "./eslint-rules/promise.js",
+        "./eslint-rules/jest.js"
     ],
     "rules": {
-        "semi": "error"
+        "semi": "error",
+        "mocha/no-mocha-arrows": 0
     }
 }

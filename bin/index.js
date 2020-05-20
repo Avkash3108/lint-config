@@ -6,5 +6,6 @@ const stylelint = require('../src/tasks/stylelint');
 yargs.scriptName("Run fake API")
   .usage('$0 <cmd> [args]')
   .command(eslint)
+  .command(stylelint)
   .help()
   .argv
