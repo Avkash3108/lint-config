@@ -1,6 +1,6 @@
 {
   "name": "@avkash3108/lint-config",
-  "version": "1.7.0",
+  "version": "1.7.1",
   "description": "Collection of jslint and stylelint rules.",
   "main": "index.js",
   "bin": {
