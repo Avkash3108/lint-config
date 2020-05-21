@@ -25,6 +25,7 @@
     "extends": [
         "plugin:react/recommended",
         "./eslint-rules/es5.js",
+        "./eslint-rules/es6.js",
         "./eslint-rules/import.js",
         "./eslint-rules/mocha.js",
         "./eslint-rules/promise.js",
