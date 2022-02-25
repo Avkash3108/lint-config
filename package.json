@@ -1,6 +1,6 @@
 {
   "name": "@avkash3108/lint-config",
-  "version": "2.2.0",
+  "version": "2.4.0",
   "description": "Collection of jslint and stylelint rules.",
   "main": "index.js",
   "bin": {
@@ -40,5 +40,8 @@
     "stylelint-scss": "^3.17.2",
     "typescript": "^3.9.2",
     "yargs": "^15.3.0-beta.0"
+  },
+  "devDependencies": {
+    "stylelint-config-standard-scss": "^3.0.0"
   }
 }
