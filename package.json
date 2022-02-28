@@ -1,6 +1,6 @@
 {
   "name": "@avkash3108/lint-config",
-  "version": "2.10.0",
+  "version": "2.11.0",
   "description": "Collection of jslint and stylelint rules.",
   "main": "index.js",
   "bin": {
@@ -24,14 +24,15 @@
   ],
   "license": "ISC",
   "dependencies": {
-    "eslint": "7.0.0",
+    "@babel/eslint-parser": "^7.5.4",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^8.10.0",
     "eslint-formatter-pretty": "^3.0.1",
     "eslint-plugin-import": "^2.20.2",
     "eslint-plugin-jest": "^23.13.1",
     "eslint-plugin-mocha": "^7.0.0",
     "eslint-plugin-promise": "^4.2.1",
-    "eslint-plugin-react": "^7.20.0",
-    "@babel/eslint-parser": "^7.5.4",
+    "eslint-plugin-react": "^7.29.2",
     "path-exists": "^4.0.0",
     "shelljs": "^0.8.4",
     "stylelint": "^13.5.3",
